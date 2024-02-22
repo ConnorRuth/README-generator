@@ -10,38 +10,72 @@ const licenses = [{name:"MIT", badge:"[![License: MIT](https://img.shields.io/ba
 {name:"The Unilicense", badge:"[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)]", link:"http://unlicense.org/"}];
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {
-  if(!license){
+function renderLicenseBadge(data) {
+  console.log(data);
+  if(data.license === "none"){
     return " ";
-  }else{const selectedLicense = licenses.find(lice => lice.name === license);
+  }else{const selectedLicense = licenses.find(lice => lice.name === data.license);
     return selectedLicense.badge;}
 }
-
+function checkLicence(data) {
+  console.log(data);
+  if(data.license === "none") {
+    return " ";
+  }else { return "8. license";}
+}
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {
-  if(!license){
+function renderLicenseLink(data) {
+  console.log(data);
+  if(data.license === "none"){
     return " ";
-  }else{const selectedLicense = licenses.find(lice => lice.name === license);
+  }else{const selectedLicense = licenses.find(lice => lice.name === data.license);
     return selectedLicense.link;}
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {
-  if(!license){
+function renderLicenseSection(data) {
+  if(data.license === "none"){
     return " ";
-  }else{const selectedLicense = licenses.find(lice => lice.name === license);
-    return selectedLicense.badge;}
+  }else{ return `## Licence
+  ${renderLicenseBadge(data)}
+  ${renderLicenseLink(data)}`}
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  renderLicenseBadge();
-  renderLicenseLink();
-  return `# ${data.title}
 
-`;
+  return `# ${data.title}
+## Table of Contents:
+1. Description
+2. Installation
+4. Usage
+5. Contributions
+6. Tests
+7. Questions
+${checkLicence(data)}
+
+## Description
+${data.description}
+
+## Installation
+${data.install}
+
+## Usage
+${data.usage}
+
+## Contributions
+${data.contrib}
+
+## Tests
+${data.tests}
+
+## Questions
+You can find my github at https://github.com/${data.github}
+
+if you have any questions email me at ${data.email}
+${renderLicenseSection(data)}`;
 }
 
 module.exports = generateMarkdown;
