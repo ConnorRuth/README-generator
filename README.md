@@ -1,39 +1,33 @@
 
-  [![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)]
-# 1
+  ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+# README Generator
 ## Table of Contents:
 [1. Description](##-Description)
-
 [2. Installation](##-Installation)
-
 [4. Usage](##-Usage)
-
 [5. Contributions](##-Contributions)
-
 [6. Tests](##-Tests)
-
 [7. Questions](##-Questions)
-
 [8. License](##-License)
 
 ## Description
-2
+Users should be able to initialize the program via the terminal and be prompted with questions to create a quality README.
 
 ## Installation
-3
+clone the repo: git clone git@github.com:ConnorRuth/README-generator.git . run the npm install command in the terminal to install the packages.
 
 ## Usage
-4
+upon running the program via "node index.js" the user will be asked a series of 8 questions about the content of the README they would like to make. The last 2 questions ask for github username and email for contact info in the questions section.
 
 ## Contributions
-5
+Any contributions you make are greatly appreciated. If you have a suggestion that would improve the project, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 
 ## Tests
-6
+none
 
 ## Questions
-You can find my github at https://github.com/8
+You can find my github at https://github.com/ConnorRuth
 
-if you have any questions email me at 9
+if you have any questions email me at connorruthven@gmail.com
 ## Licence
-  Distributed under the Creative Commons Zero v1.0 License. See http://creativecommons.org/publicdomain/zero/1.0/ for more information
+  Distributed under the MIT License. See https://opensource.org/licenses/MIT for more information
