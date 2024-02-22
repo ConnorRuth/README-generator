@@ -8,43 +8,30 @@ const licenses = [{name:"MIT", badge:"![License: MIT](https://img.shields.io/bad
 {name:"Eclipse Public 2.0", badge:"![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)", link:"https://opensource.org/licenses/EPL-1.0"}, 
 {name:"Mozilla Public 2.0", badge:"![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)", link:"https://opensource.org/licenses/MPL-2.0"}, 
 {name:"The Unilicense", badge:"![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)", link:"http://unlicense.org/"}];
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
 function renderLicenseBadge(data) {
-  console.log(data);
   if(data.license === "none"){
     return " ";
   }else{const selectedLicense = licenses.find(lice => lice.name === data.license);
     return selectedLicense.badge;}
 }
 function checkLicence(data) {
-  console.log(data);
   if(data.license === "none") {
     return " ";
   }else { return "[8. License](##-License)";}
 }
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
 function renderLicenseLink(data) {
-  console.log(data);
   if(data.license === "none"){
     return " ";
   }else{const selectedLicense = licenses.find(lice => lice.name === data.license);
     return selectedLicense.link;}
 }
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
 function renderLicenseSection(data) {
   if(data.license === "none"){
     return " ";
   }else{ return `## Licence
   Distributed under the ${data.license} License. See ${renderLicenseLink(data)} for more information`}
 }
-
-// TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-
   return `
   ${renderLicenseBadge(data)}
 # ${data.title}
@@ -78,5 +65,4 @@ You can find my github at https://github.com/${data.github}
 if you have any questions email me at ${data.email}
 ${renderLicenseSection(data)}`;
 }
-
 module.exports = generateMarkdown;

@@ -3,11 +3,17 @@
 # 1
 ## Table of Contents:
 [1. Description](##-Description)
+
 [2. Installation](##-Installation)
+
 [4. Usage](##-Usage)
+
 [5. Contributions](##-Contributions)
+
 [6. Tests](##-Tests)
+
 [7. Questions](##-Questions)
+
 [8. License](##-License)
 
 ## Description
