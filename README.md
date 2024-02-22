@@ -2,13 +2,16 @@
   ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 # README Generator
 ## Table of Contents:
-[1. Description](##-Description)
-[2. Installation](##-Installation)
-[4. Usage](##-Usage)
-[5. Contributions](##-Contributions)
-[6. Tests](##-Tests)
-[7. Questions](##-Questions)
-[8. License](##-License)
+1.[Description](##-Description)
+
+2.[Installation](##-Installation)
+
+3.[Usage](##-Usage)
+
+4.[Contributions](##-Contributions)
+5.[Tests](##-Tests)
+6.[Questions](##-Questions)
+7.[License](##-License)
 
 ## Description
 Users should be able to initialize the program via the terminal and be prompted with questions to create a quality README.
