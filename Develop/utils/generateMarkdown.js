@@ -17,7 +17,7 @@ function renderLicenseBadge(data) {
 function checkLicence(data) {
   if(data.license === "none") {
     return " ";
-  }else { return "[8. License](##-License)";}
+  }else { return "7.[License](##-License)";}
 }
 function renderLicenseLink(data) {
   if(data.license === "none"){
@@ -36,12 +36,12 @@ function generateMarkdown(data) {
   ${renderLicenseBadge(data)}
 # ${data.title}
 ## Table of Contents:
-[1. Description](##-Description)
-[2. Installation](##-Installation)
-[4. Usage](##-Usage)
-[5. Contributions](##-Contributions)
-[6. Tests](##-Tests)
-[7. Questions](##-Questions)
+1.[Description](##-Description)
+2.[Installation](##-Installation)
+3.[Usage](##-Usage)
+4.[Contributions](##-Contributions)
+5.[Tests](##-Tests)
+6.[Questions](##-Questions)
 ${checkLicence(data)}
 
 ## Description
