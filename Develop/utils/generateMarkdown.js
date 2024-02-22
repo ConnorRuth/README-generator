@@ -21,7 +21,7 @@ function checkLicence(data) {
   console.log(data);
   if(data.license === "none") {
     return " ";
-  }else { return "8. license";}
+  }else { return "[8. License](##-License)";}
 }
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -39,21 +39,22 @@ function renderLicenseSection(data) {
   if(data.license === "none"){
     return " ";
   }else{ return `## Licence
-  ${renderLicenseBadge(data)}
-  ${renderLicenseLink(data)}`}
+  Distributed under the ${data.license} License. See ${renderLicenseLink(data)} for more information`}
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
 
-  return `# ${data.title}
+  return `
+  ${renderLicenseBadge(data)}
+# ${data.title}
 ## Table of Contents:
-1. Description
-2. Installation
-4. Usage
-5. Contributions
-6. Tests
-7. Questions
+[1. Description](##-Description)
+[2. Installation](##-Installation)
+[4. Usage](##-Usage)
+[5. Contributions](##-Contributions)
+[6. Tests](##-Tests)
+[7. Questions](##-Questions)
 ${checkLicence(data)}
 
 ## Description
